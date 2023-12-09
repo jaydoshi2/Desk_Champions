@@ -2,7 +2,7 @@ header {
     height: 10%;
     width: 100%;
 }
-/* Find me if you can */
+
 #nav-belt-1 {
     height: 10%;
 }
@@ -76,10 +76,13 @@ ul a{
 }
  
   img {
-     max-width: 100%;
-    max-height: 30%; 
-    display: block;
-    margin: auto;
+    max-width: 50%;
+    max-height: 10%; 
+  }
+  .globe-image{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
   }
   
 .foot-panel4{
@@ -91,7 +94,6 @@ ul a{
     justify-content: space-evenly;
 }
 ul {
-        padding: 0;
         margin: 0 auto;
         max-width: 600px; 
         text-align: left;
@@ -111,8 +113,6 @@ ul {
     list-style: none;
 }
 .countries {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -120,14 +120,16 @@ ul {
     text-align: center;
 }
 .language-dropdown {
-    margin-top: 10px;
+    margin-top: 5px;
+    height: 10%; 
+
 }
 
 #language-select {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: white;
-    color: black;
+    padding: 2px;
+    border-radius: 2px;
+    background-color: rgb(35,47,62);
+    color: white;
     border: 1px solid #ccc;
 }
 
@@ -159,5 +161,5 @@ ul {
 }
 
 .col p {
-    margin: 0;
+    margin: 0 auto;
 }
