@@ -106,3 +106,22 @@ button {
         font-size: 1em; /* Adjust font size */
     }
 }
+
+img{
+    height: 2em;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+a{
+    text-decoration:none;
+    color: lightblue;
+}
+
+.githubl > img{
+    height: 2.3em;
+}
+
+img:hover{
+    height: 2.5em;
+    width: 2.5em;
+}
