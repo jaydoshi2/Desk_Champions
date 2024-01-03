@@ -58,6 +58,7 @@ label {
 
 #noAcct{
     visibility: visible;
+    font-size: small;
 }
 
 input {
