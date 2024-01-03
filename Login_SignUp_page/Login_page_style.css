@@ -50,20 +50,27 @@ form h3 {
 label {
     color: white;
     display: block;
-    margin-top: 3vh; /* Responsive margin */
+    margin-top: 2vh; /* Responsive margin */
     font-size: 1.2em; /* Responsive font size */
     font-weight: 500;
+    visibility: hidden;
+}
+
+#noAcct{
+    visibility: visible;
 }
 
 input {
     height: 6vh; /* Responsive height */
     width: 100%;
-    background-color: rgb(42, 170, 255);
-    border-radius: 3px;
+    background-color:transparent;
+    border-radius: 25px;
     padding: 0 20px;
     margin-top: 1.5vh; /* Responsive margin */
     font-size: 1em; /* Responsive font size */
-    font-weight: 300;
+    font-weight: 500;
+    border: 1px solid black;
+    box-shadow: 0 0 3px rgb(126, 169, 255);
 }
 
 ::placeholder {
@@ -72,14 +79,16 @@ input {
 
 button {
     margin-top: 5vh; /* Responsive margin */
-    width: 100%;
+    width: 75%;
     background-color: #ffffff;
     color: #080710;
     padding: 3vh 0; /* Responsive padding */
-    font-size: 1.2em; /* Responsive font size */
+    font-size: 1.5em; /* Responsive font size */
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 20vh;
     cursor: pointer;
+    border: 1px solid black;
+    
 }
 
 /* Media Queries for Responsiveness */
