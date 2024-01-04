@@ -19,7 +19,6 @@ body {
     align-items: center;
 }
 
-
 /* Form Styles */
 form {
     max-width: 90%; 
@@ -38,7 +37,6 @@ form * {
     color: white;
     outline: none;
 }
-
 form h3 {
     color: white;
     font-size: 2em; /* Responsive font size */
@@ -54,6 +52,12 @@ label {
     font-weight: 500;
     visibility: hidden;
 }
+
+#haveAcc{
+    visibility: visible;
+    font-size: small;
+
+}
 input {
     height: 6vh; /* Responsive height */
     width: 100%;
@@ -64,11 +68,16 @@ input {
     font-size: 1em; /* Responsive font size */
     font-weight: 500;
     border: 1px solid black;
+
     box-shadow: 0 0 4px rgb(126, 169, 255);
 }
 #aldAcct{
     visibility: visible;
+
+    box-shadow: 0 0 3px rgb(126, 169, 255);
+
 }
+
 ::placeholder {
     color: #e5e5e5;
 }
@@ -100,7 +109,7 @@ button {
     }
     
     input {
-        height: 30px; /* Adjust height */
+        height: 40px; /* Adjust height */
         font-size: 0.9em; /* Adjust font size */
     }
     
