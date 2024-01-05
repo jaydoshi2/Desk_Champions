@@ -19,8 +19,13 @@
         <label for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
 
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <div id="password-container">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="passwordInp">
+            <!-- <button id="eye-button"><img src="images/eye.svg" alt="" id="eye-img"></button> -->
+            <button id="eye-button" onclick="revealPassword()"><img src="images/eye-white.svg" alt=""
+                    id="eye-img"></button>
+        </div>
 
         <button type="submit">Log In</button>
 
@@ -35,5 +40,16 @@
         </div>
     </form>
 </body>
+
+<script>
+    let passwordInp = document.querySelector("#passwordInp");
+    function revealPassword() {
+        if (passwordInp.getAttribute("type") === "password") {
+            passwordInp.setAttribute("type", "text");
+        } else {
+            passwordInp.setAttribute("type", "password");
+        }
+    }
+</script>
 
 </html>

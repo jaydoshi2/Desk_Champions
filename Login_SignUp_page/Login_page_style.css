@@ -74,6 +74,27 @@ input {
     box-shadow: 0 0 3px rgb(126, 169, 255);
 }
 
+#password-container{
+    position: relative;
+}
+
+#eye-img{
+    width: 25px;
+    border-radius: 50%;
+}
+
+#eye-button{
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    width: fit-content;
+    height: max-content;
+    transform: translate(-150%, -56%);
+    border-radius: 100%;
+    border:none;
+    padding: 0;
+}
+
 ::placeholder {
     color: #e5e5e5;
 }
@@ -89,7 +110,7 @@ button {
     border-radius: 20vh;
     cursor: pointer;
     border: 1px solid black;
-    
+
 }
 
 /* Media Queries for Responsiveness */
