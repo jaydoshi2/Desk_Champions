@@ -22,16 +22,15 @@
         <div id="password-container">
             <label for="password">Password</label>
             <input type="password" placeholder="Password" id="passwordInp">
-            <!-- <button id="eye-button"><img src="images/eye.svg" alt="" id="eye-img"></button> -->
-            <button id="eye-button" onclick="revealPassword()"><img src="images/eye-white.svg" alt=""
-                    id="eye-img"></button>
+            <button type="button" id="eye-button" onmousedown="revealPassword()">
+                <img src="images/eye-white.svg" alt="" id="eye-img">
+            </button>
+            
         </div>
 
         <button type="submit">Log In</button>
 
         <label id="noAcct">Dont't have a account? <a href="SignUp_page.html">Create Account</a></label>
-
-        <label id="noAcct">Don't have an account? <a href="#">Create Account</a></label>
 
         <div class="logos">
             <a href="#"> <img src="images/Facebook_Logo_(2019).png.webp" alt="facebook"></a>
