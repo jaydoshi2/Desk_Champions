@@ -52,12 +52,6 @@ label {
     font-weight: 500;
     visibility: hidden;
 }
-
-#haveAcc{
-    visibility: visible;
-    font-size: small;
-
-}
 input {
     height: 6vh; /* Responsive height */
     width: 100%;
@@ -70,12 +64,6 @@ input {
     border: 1px solid black;
 
     box-shadow: 0 0 4px rgb(126, 169, 255);
-}
-#aldAcct{
-    visibility: visible;
-
-    box-shadow: 0 0 3px rgb(126, 169, 255);
-
 }
 
 ::placeholder {
@@ -121,4 +109,9 @@ button {
 a{
     text-decoration:none;
     color: lightblue;
+    border: none;
+}
+
+#aldAcct{
+    visibility: visible;
 }

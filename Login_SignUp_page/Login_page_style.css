@@ -36,7 +36,7 @@ form {
 
 /* Form Element Styles */
 form * {
-    color: #0e0808;
+    color: white;
     outline: none;
 }
 
@@ -58,7 +58,6 @@ label {
 
 #noAcct{
     visibility: visible;
-    font-size: small;
 }
 
 input {
@@ -92,7 +91,7 @@ input {
     transform: translate(-150%, -56%);
     border-radius: 100%;
     border:none;
-    padding: 0;
+    padding-top: 2.9%;
 }
 
 ::placeholder {
