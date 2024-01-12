@@ -1,0 +1,8 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.sourcePaths": [
+        "spring-boot-jd-chat",
+        "spring-boot-jd-chat\\src\\main\\java\\com\\jay\\websocket"
+    ],
+    "java.project.outputPath": "target"
+}
