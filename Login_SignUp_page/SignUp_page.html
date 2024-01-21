@@ -7,14 +7,18 @@
 </head>
 
 <body>
-    <form>
+    <form onsubmit="return validateForm()">
         <h3>Sign Up Form</h3>
 
+        
         <label for="fullname">Full Name</label>
         <input type="text" placeholder="Your Full Name" id="fullname">
+        <div class="error" id="name-error"></div>
 
+        
         <label for="email">Email</label>
         <input type="email" placeholder="Your Email Address" id="email">
+        <div class="error" id="email-error"></div>
 
         <div id="password-container">
             <label for="newpassword">Create Password</label>
@@ -22,6 +26,7 @@
             <button type="button" class="eye-button" onclick="togglePasswordVisibility(this)">
                 <img src="images/eye-white.svg" alt="" class="eye-img">
             </button>
+            <div class="error" id="password-error"></div>
         </div>
 
         <div id="password-confirm-container">
@@ -30,6 +35,7 @@
             <button type="button" class="eye-button" onclick="togglePasswordVisibility(this)">
                 <img src="images/eye-white.svg" alt="" class="eye-img">
             </button>
+            <div class="error" id="confirm-password-error"></div>
         </div>
 
         <button type="submit">Sign Up</button>
@@ -50,7 +56,57 @@
                 eyeImg.src = "images/eye-white.svg";
             }
         }
-    </script>
+
+        function validateForm() //for give error 
+        {
+                var nameInput = document.getElementById("fullname").value;
+                var emailInput = document.getElementById("email").value;
+                var passwordInput = document.querySelector("#password-container .newpassword").value;
+                var confirmPasswordInput = document.querySelector("#password-confirm-container .newpassword").value;
+
+                // Reset error messages
+                resetErrors();
+
+                // Validate name
+                if (nameInput.trim() === "") {
+                    displayError("name-error", "Please Enter Your Name");
+                    return false;
+                }
+
+                // Validate email
+                if (emailInput.trim() === "") {
+                    displayError("email-error", "Please Enter Your Email");
+                    return false;
+                }
+
+                // Validate password
+                if (passwordInput.trim() === "") {
+                    displayError("password-error", "Please Enter a Password");
+                    return false;
+                }
+
+                // Validate confirm password
+                if (confirmPasswordInput.trim() === "" || confirmPasswordInput !== passwordInput) {
+                    displayError("confirm-password-error", "Password does not match! Please Enter Correct Password");
+                    return false;
+                }
+
+                return true;
+            }
+
+            function resetErrors() 
+            {
+                var errorElements = document.getElementsByClassName("error");
+                for (var i = 0; i < errorElements.length; i++) {
+                    errorElements[i].innerHTML = "";
+                }
+            }
+
+            function displayError(elementId, message) 
+            {
+                document.getElementById(elementId).innerHTML = message;
+            }
+                </script>
 
 </body>
 

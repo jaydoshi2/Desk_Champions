@@ -139,3 +139,8 @@ a{
 #aldAcct{
     visibility: visible;
 }
+.error {
+    color: #ff0000;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+}
