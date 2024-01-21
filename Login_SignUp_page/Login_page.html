@@ -25,7 +25,7 @@
             <button type="button" id="eye-button" onmousedown="revealPassword()">
                 <img src="images/eye-white.svg" alt="" id="eye-img">
             </button>
-            
+
         </div>
 
         <button type="submit">Log In</button>
@@ -34,7 +34,7 @@
 
         <div class="logos">
             <a href="#"> <img src="images/Facebook_Logo_(2019).png.webp" alt="facebook"></a>
-            <a href="#"><img src="images/2702602.png" google"></a>
+            <a href="#"><img src="images/2702602.png" alt="google"></a>
             <a href="#" class="githubl"><img src="images/image_processing20220801-17461-1m9zilq.png" alt="github"></a>
         </div>
     </form>
@@ -42,11 +42,14 @@
 
 <script>
     let passwordInp = document.querySelector("#passwordInp");
+    let eyeImg = document.querySelector("#eye-img");
     function revealPassword() {
         if (passwordInp.getAttribute("type") === "password") {
             passwordInp.setAttribute("type", "text");
+            eyeImg.setAttribute("src", "images/eye-white-crossed.svg");
         } else {
             passwordInp.setAttribute("type", "password");
+            eyeImg.setAttribute("src", "images/eye-white.svg");
         }
     }
 </script>

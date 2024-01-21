@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Transparent form</title>
     <link rel="stylesheet" href="SignUp_page.css">
 </head>
+
 <body>
     <form>
         <h3>Sign Up Form</h3>
@@ -14,16 +16,42 @@
         <label for="email">Email</label>
         <input type="email" placeholder="Your Email Address" id="email">
 
-        <label for="newpassword">Create Password</label>
-        <input type="password" placeholder="Create Password" id="newpassword">
+        <div id="password-container">
+            <label for="newpassword">Create Password</label>
+            <input type="password" placeholder="Create Password" class="newpassword">
+            <button type="button" class="eye-button" onclick="togglePasswordVisibility(this)">
+                <img src="images/eye-white.svg" alt="" class="eye-img">
+            </button>
+        </div>
 
-        <label for="newpassword">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="newpassword">
+        <div id="password-confirm-container">
+            <label for="newpassword">Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" class="newpassword">
+            <button type="button" class="eye-button" onclick="togglePasswordVisibility(this)">
+                <img src="images/eye-white.svg" alt="" class="eye-img">
+            </button>
+        </div>
 
         <button type="submit">Sign Up</button>
 
-
-        <label id= "aldAcct">Already have an account? <a href="Login_page.html">Login Here</a></label>
+        <label id="aldAcct">Already have an account? <a href="Login_page.html">Login Here</a></label>
     </form>
+
+    <script>
+        function togglePasswordVisibility(button) {
+            var passwordInput = button.parentElement.querySelector(".newpassword");
+            var eyeImg = button.querySelector(".eye-img");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeImg.src = "images/eye-white-crossed.svg";
+            } else {
+                passwordInput.type = "password";
+                eyeImg.src = "images/eye-white.svg";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
